@@ -1,0 +1,10 @@
+services:
+    app:
+      build: .
+      container_name: app
+      command: ./.docker/entrypoint.sh
+      tty: true
+      volumes:
+        - .:/home/python/app
+      ports:
+        - 8000:8000
